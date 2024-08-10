@@ -1,0 +1,178 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #222;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+    background: #333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+h1 {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+h3 {
+    color: #f0f0f0;
+    margin-bottom: 20px;
+}
+
+#temp-link {
+    color: #007BFF;
+}
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.drop-area {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border: 2px dashed #007BFF;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #444;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.drop-area:hover {
+    background-color: #555;
+}
+
+.drop-area .icon {
+    margin-bottom: 10px;
+    fill: #007BFF;
+}
+
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #f0f0f0;
+}
+
+p {
+    margin: 0;
+    color: #f0f0f0;
+}
+
+.file-list {
+    width: 100%;
+    max-width: 600px;
+}
+
+.file-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #444;
+    border: 1px solid #555;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.file-item:hover {
+    background-color: #555;
+}
+
+.file-name {
+    color: #007BFF;
+    text-decoration: none;
+    flex-grow: 1;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.btn-delete {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    color: #007BFF;
+}
+
+.btn-delete .icon {
+    fill: #007BFF;
+}
+
+.link {
+    background-color: #444;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .drop-area {
+        max-width: 100%;
+    }
+
+    .file-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .file-name {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .btn-delete {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+        padding: 15px;
+    }
+
+    .drop-area {
+        padding: 15px;
+    }
+
+    .file-item {
+        padding: 5px;
+    }
+}
